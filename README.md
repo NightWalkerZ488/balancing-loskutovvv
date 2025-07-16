@@ -25,4 +25,9 @@
 ### >На проверку направьте конфигурационный файл haproxy, скриншоты, где видно перенаправление запросов на разные серверы при обращении к HAProxy c использованием домена example.local и без него.
 
 ## Ответ:
-Запуск python серверов на разных портах:
+Запуск 3-х python серверов на разных портах:
+![3py](https://github.com/NightWalkerZ488/balancing-loskutovvv/blob/main/3python.PNG)
+Настройка веса и адреса example.local в ![конфигурационном файле](https://github.com/NightWalkerZ488/balancing-loskutovvv/blob/main/haproxy2.cfg)
+Тест получившихся настроек: без указания example.local ответа нет, с указнием работает механизм round robin с весами.
+![noanswer](https://github.com/NightWalkerZ488/balancing-loskutovvv/blob/main/norobin.PNG)
+![roundrobin](https://github.com/NightWalkerZ488/balancing-loskutovvv/blob/main/robinround.PNG)
